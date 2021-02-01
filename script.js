@@ -27,6 +27,11 @@ document.getElementById('keypad').addEventListener('click', function(event){
             const pin = document.getElementById('typed-pin');
             pin.value = "";
         }
+        if(digit == "<"){
+            const pin = document.getElementById('typed-pin').value;
+            const currentPin = pin.slice(0, -1);
+            document.getElementById('typed-pin').value = currentPin;
+        }
     }
     else{
         const pinNumber = document.getElementById('typed-pin');
