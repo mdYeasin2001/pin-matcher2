@@ -23,6 +23,10 @@ document.getElementById('keypad').addEventListener('click', function(event){
     if(isNaN(digit)){
         //Not a Number
         // console.log("Not a Number");
+        if(digit =="C"){
+            const pin = document.getElementById('typed-pin');
+            pin.value = "";
+        }
     }
     else{
         const pinNumber = document.getElementById('typed-pin');
