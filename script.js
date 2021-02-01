@@ -16,3 +16,16 @@ function displayPin(){
     const pinInput = document.getElementById('pin');
     pinInput.value = getPin();
 }
+
+// keypad work
+document.getElementById('keypad').addEventListener('click', function(event){
+    const digit = event.target.innerText;
+    if(isNaN(digit)){
+        //Not a Number
+        // console.log("Not a Number");
+    }
+    else{
+        const pinNumber = document.getElementById('typed-pin');
+        pinNumber.value += digit;
+    }
+});
